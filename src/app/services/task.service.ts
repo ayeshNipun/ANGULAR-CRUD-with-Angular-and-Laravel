@@ -30,4 +30,18 @@ export class TaskService {
     getTasks():Observable<Task[]> {
         return this.http.get<Task[]>(this.server+'get');
     }
+
+    deleteTask(taskId):Observable<Task>{
+        const newTask = {
+            id: taskId
+        }
+        return this.http.post<Task>(this.server+'delete', newTask);
+    }
+
+    showTask(taskId):Observable<Task>{
+        const newTask = {
+            id: taskId
+        }
+        return this.http.post<Task>(this.server+'show', newTask)
+    }
 }
