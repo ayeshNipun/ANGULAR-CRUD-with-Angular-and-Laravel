@@ -1,0 +1,8 @@
+<div class="mt-3">
+    <h5>Available Tasks</h5>
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let task of tasks">
+            <app-task-item [task]="task"></app-task-item>
+        </li>
+    </ul>
+</div>
